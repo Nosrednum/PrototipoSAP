@@ -1,0 +1,102 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.untitledPrototype.controller.Page8" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showAnchorBar="true" showFooter="false" subSectionLayout="TitleOnTop">
+        <uxap:headerContent>
+            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <VBox alignItems="Start" direction="Column" fitContainer="true" width="349px" renderType="Div" visible="true" height="auto">
+                        <items>
+                            <HBox alignItems="Start" direction="Row" fitContainer="true" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <Text text="Nombre Proveedor" width="193.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                        <items>
+                                            <Text text="{Proveedor}" width="286.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </items>
+                                        <layoutData/>
+                                    </HBox>
+                                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="178px" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                        <items>
+                                            <Text text="Valor a cancelar:" width="163px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </items>
+                                        <layoutData/>
+                                    </HBox>
+                                    <Text text="{path: 'Valor_total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="129px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <Text text="COP" width="79.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </items>
+                                <layoutData/>
+                            </HBox>
+                            <HBox alignItems="Start" direction="Row" fitContainer="true" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <Text text="Encargado pago:" width="154.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <Text text="{Encargado}" width="95.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </items>
+                                <layoutData/>
+                            </HBox>
+                        </items>
+                        <layoutData/>
+                    </VBox>
+                </items>
+                <layoutData/>
+            </VBox>
+            <Button text="Pagar" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+            <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="689px" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Valor a pagar" width="175px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Método de pago" width="319px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Fecha del pago" width="276px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Valor cancelado" width="235.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="{path: 'Valor_total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="137px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <ComboBox editable="true" enabled="true" visible="true" width="172.00000000px" valueState="None" maxWidth="100%">
+                                <items>
+                                    <core:Item text="Cheque" enabled="true" key="Cheque"/>
+                                    <core:Item text="Efectivo" enabled="true" key="Efectivo"/>
+                                    <core:Item text="Tarjeta" enabled="true" key="Tarjeta"/>
+                                </items>
+                            </ComboBox>
+                            <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <unified:Calendar months="1" singleSelection="true" intervalSelection="false" firstDayOfWeek="0" visible="true">
+                                <unified:specialDates/>
+                                <unified:selectedDates/>
+                            </unified:Calendar>
+                            <Input value="{path: 'Valor_total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" type="Text" description="Ingresar valor" showValueHelp="false" enabled="true" visible="true" width="265px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                </items>
+                <layoutData/>
+            </HBox>
+        </uxap:headerContent>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="/build/uilibraries/content/static/image-canvas.svg" objectTitle="Title" objectSubtitle="Subtitle" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions>
+                    <Button text="Volver a pago de proveedores" type="Transparent" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="true" title="Factura a pagar" titleUppercase="true" visible="true">
+                <uxap:subSections/>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Approve" type="Accept" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Reject" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <OverflowToolbarButton text="Action" type="Default" icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>

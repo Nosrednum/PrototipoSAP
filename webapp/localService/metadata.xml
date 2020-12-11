@@ -1,0 +1,146 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="96b6cc58237109f71482dabd" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="96b6cc58237109f71482dabd_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="FactProveSet" EntityType="96b6cc58237109f71482dabd.FactProve" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="FactProveDetalleFacturaDetalleFactura" Association="96b6cc58237109f71482dabd.FactProveDetalleFacturaDetalleFactura" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="FactProveSet" Role="FromRole_FactProveDetalleFacturaDetalleFactura"/>
+                    <End EntitySet="DetalleFacturaSet" Role="ToRole_FactProveDetalleFacturaDetalleFactura"/>
+                </AssociationSet>
+                <AssociationSet Name="FactProveEncabezadoEncabezadoFactura" Association="96b6cc58237109f71482dabd.FactProveEncabezadoEncabezadoFactura" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="FactProveSet" Role="FromRole_FactProveEncabezadoEncabezadoFactura"/>
+                    <End EntitySet="EncabezadoFacturaSet" Role="ToRole_FactProveEncabezadoEncabezadoFactura"/>
+                </AssociationSet>
+                <EntitySet Name="DetalleFacturaSet" EntityType="96b6cc58237109f71482dabd.DetalleFactura" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="DetalleFacturaRelationNameProductosDetail" Association="96b6cc58237109f71482dabd.DetalleFacturaRelationNameProductosDetail" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="DetalleFacturaSet" Role="FromRole_DetalleFacturaRelationNameProductosDetail"/>
+                    <End EntitySet="ProductosDetailSet" Role="ToRole_DetalleFacturaRelationNameProductosDetail"/>
+                </AssociationSet>
+                <EntitySet Name="ProductosDetailSet" EntityType="96b6cc58237109f71482dabd.ProductosDetail" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="FactEmpleadosSet" EntityType="96b6cc58237109f71482dabd.FactEmpleados" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="FactEmpleadosRelationNameEmpleadoDetail" Association="96b6cc58237109f71482dabd.FactEmpleadosRelationNameEmpleadoDetail" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="FactEmpleadosSet" Role="FromRole_FactEmpleadosRelationNameEmpleadoDetail"/>
+                    <End EntitySet="EmpleadoDetailSet" Role="ToRole_FactEmpleadosRelationNameEmpleadoDetail"/>
+                </AssociationSet>
+                <EntitySet Name="EmpleadoDetailSet" EntityType="96b6cc58237109f71482dabd.EmpleadoDetail" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="EncabezadoFacturaSet" EntityType="96b6cc58237109f71482dabd.EncabezadoFactura" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="FactProve" sap:pdm-semantics="business-data">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Estado" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Estado"/>
+                <Property Name="Encargado" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Encargado"/>
+                <Property Name="Proveedor" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Proveedor"/>
+                <Property Name="Fecha_ingreso" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="Fecha_ingreso"/>
+                <Property Name="Fecha_vencimiento" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="Fecha_vencimiento"/>
+                <Property Name="Valor_total" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Valor_total"/>
+                <NavigationProperty Name="DetalleFactura" Relationship="96b6cc58237109f71482dabd.FactProveDetalleFacturaDetalleFactura" FromRole="FromRole_FactProveDetalleFacturaDetalleFactura" ToRole="ToRole_FactProveDetalleFacturaDetalleFactura"/>
+                <NavigationProperty Name="Encabezado" Relationship="96b6cc58237109f71482dabd.FactProveEncabezadoEncabezadoFactura" FromRole="FromRole_FactProveEncabezadoEncabezadoFactura" ToRole="ToRole_FactProveEncabezadoEncabezadoFactura"/>
+            </EntityType>
+            <Association Name="FactProveDetalleFacturaDetalleFactura">
+                <End Type="96b6cc58237109f71482dabd.FactProve" Multiplicity="1" Role="FromRole_FactProveDetalleFacturaDetalleFactura"/>
+                <End Type="96b6cc58237109f71482dabd.DetalleFactura" Multiplicity="*" Role="ToRole_FactProveDetalleFacturaDetalleFactura"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_FactProveDetalleFacturaDetalleFactura">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_FactProveDetalleFacturaDetalleFactura">
+                        <PropertyRef Name="___FK_75bbeed4a7f730b1149561d8_00007"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="FactProveEncabezadoEncabezadoFactura">
+                <End Type="96b6cc58237109f71482dabd.FactProve" Multiplicity="1" Role="FromRole_FactProveEncabezadoEncabezadoFactura"/>
+                <End Type="96b6cc58237109f71482dabd.EncabezadoFactura" Multiplicity="*" Role="ToRole_FactProveEncabezadoEncabezadoFactura"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_FactProveEncabezadoEncabezadoFactura">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_FactProveEncabezadoEncabezadoFactura">
+                        <PropertyRef Name="___FK_a37f399803601e3314959bf3_00007"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="DetalleFactura">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre_Producto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre_Producto"/>
+                <Property Name="Fecha_Entrega" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="Fecha_Entrega"/>
+                <Property Name="Cantidad" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cantidad"/>
+                <Property Name="Valor_Unitario" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Valor_Unitario"/>
+                <Property Name="Valor_Total" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Valor_Total"/>
+                <Property Name="___FK_d5c493d366e4bb4e14830754_00006" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_d5c493d366e4bb4e14830754_00006"/>
+                <Property Name="___FK_75bbeed4a7f730b1149561d8_00007" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_75bbeed4a7f730b1149561d8_00007"/>
+                <NavigationProperty Name="RelationName" Relationship="96b6cc58237109f71482dabd.DetalleFacturaRelationNameProductosDetail" FromRole="FromRole_DetalleFacturaRelationNameProductosDetail" ToRole="ToRole_DetalleFacturaRelationNameProductosDetail"/>
+            </EntityType>
+            <Association Name="DetalleFacturaRelationNameProductosDetail">
+                <End Type="96b6cc58237109f71482dabd.DetalleFactura" Multiplicity="1" Role="FromRole_DetalleFacturaRelationNameProductosDetail"/>
+                <End Type="96b6cc58237109f71482dabd.ProductosDetail" Multiplicity="1" Role="ToRole_DetalleFacturaRelationNameProductosDetail"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_DetalleFacturaRelationNameProductosDetail">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_DetalleFacturaRelationNameProductosDetail">
+                        <PropertyRef Name="___FK_d5c493d366e4bb4e14830754_00006"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="ProductosDetail">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Descripcion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descripcion"/>
+                <Property Name="Valor_Unitario" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Valor_Unitario"/>
+            </EntityType>
+            <EntityType Name="FactEmpleados">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Nombre"/>
+                <Property Name="Apellido" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Apellido"/>
+                <Property Name="Area" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Area"/>
+                <Property Name="SueldoFinal" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SueldoFinal"/>
+                <Property Name="___FK_c90a79da68b9d8df14833708_00014" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_c90a79da68b9d8df14833708_00014"/>
+                <NavigationProperty Name="RelationName" Relationship="96b6cc58237109f71482dabd.FactEmpleadosRelationNameEmpleadoDetail" FromRole="FromRole_FactEmpleadosRelationNameEmpleadoDetail" ToRole="ToRole_FactEmpleadosRelationNameEmpleadoDetail"/>
+            </EntityType>
+            <Association Name="FactEmpleadosRelationNameEmpleadoDetail">
+                <End Type="96b6cc58237109f71482dabd.FactEmpleados" Multiplicity="1" Role="FromRole_FactEmpleadosRelationNameEmpleadoDetail"/>
+                <End Type="96b6cc58237109f71482dabd.EmpleadoDetail" Multiplicity="1" Role="ToRole_FactEmpleadosRelationNameEmpleadoDetail"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_FactEmpleadosRelationNameEmpleadoDetail">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_FactEmpleadosRelationNameEmpleadoDetail">
+                        <PropertyRef Name="___FK_c90a79da68b9d8df14833708_00014"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="EmpleadoDetail">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Nombre" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="Apellido" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Apellido"/>
+                <Property Name="Turnos" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Turnos"/>
+                <Property Name="SueldoBase" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SueldoBase"/>
+            </EntityType>
+            <EntityType Name="EncabezadoFactura">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_a37f399803601e3314959bf3_00007" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_a37f399803601e3314959bf3_00007"/>
+                <Property Name="Valor" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Valor"/>
+                <Property Name="Concepto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Concepto"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,200 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.untitledPrototype.controller.Page3" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page showHeader="true" title="" showFooter="true" showNavButton="true">
+        <content>
+            <Title text="Proveedor" titleStyle="H2" width="auto" textAlign="Begin" visible="true" wrapping="false" class="sapUiTinyMarginBottom sapUiMediumMarginBegin"/>
+            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false" class="sapUiMediumMarginBegin">
+                <items>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Nombre Proveedor:" width="176.42709350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Correas de Los Alpes" width="140.42709350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Cuenta de banco:" width="144.42709350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Correas de Los Alpes" width="181.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Nombre del banco:" width="144.42709350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Correas de Los Alpes" width="172.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <core:Icon src="sap-icon://phone" size="20px" height="1px" width="37.208335876464844px" visible="true"/>
+                            <Text text="Teléfono:" width="99.20833587646484px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Correas de Los Alpes" width="128.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="País:" width="176.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Valor a pagar" width="142.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Número de cuenta:" width="143.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Correas de Los Alpes" width="181.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Dirección" width="144.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Cuenta de banco:" width="195.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="73.5625px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                </items>
+                <layoutData/>
+            </VBox>
+            <Title text="Datos básicos" titleStyle="H2" width="auto" textAlign="Begin" visible="true" wrapping="false" class="sapUiSmallMarginTop sapUiTinyMarginBottom sapUiMediumMarginBegin"/>
+            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false" class="sapUiMediumMarginBegin">
+                <items>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Texto:" width="176.42709350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Correas de Los Alpes" width="999px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="144.42709350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Total:" width="176.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Valor a pagar" width="142.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="73.5625px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Acuerdo de pago:" width="176.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Valor a pagar" width="142.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="73.5625px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Proveedor" width="176.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Valor a pagar" width="142.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="73.5625px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Impuestos:" width="176.78125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="Valor a pagar" width="142.20834350585938px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="" width="73.5625px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                </items>
+                <layoutData/>
+            </VBox>
+            <Table width="1239px" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin" itemPress="_onTableItemPress" items="{path:'/DetalleFacturaSet', templateShareable:true}">
+                <infoToolbar>
+                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                        <content>
+                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </content>
+                    </Toolbar>
+                </infoToolbar>
+                <headerToolbar>
+                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                        <content>
+                            <Title text="Items (9)" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                            <ToolbarSpacer width=""/>
+                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <OverflowToolbarButton text="Settings" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                        <header>
+                            <Text text="Nombre Item" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                        <header>
+                            <Text text="Fecha recibido" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Cantidad" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Valor Unitario" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Valor total" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation">
+                        <cells>
+                            <Link text="{ID}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                            <Text text="{Nombre_Producto}" width="126.00000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="{path: 'Fecha_Entrega', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Text text="{path: 'Cantidad', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Link text="{path: 'Valor_Unitario', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                            <Text text="{path: 'Valor_Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="" iconColor="Default" text="Elementos" count="9" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content/>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+            <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <Button text="Volver a facturas" type="Default" icon="sap-icon://arrow-left" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Text text="" width="65px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                    <Button text="Detalle producto" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </items>
+                <layoutData/>
+            </HBox>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <OverflowToolbarButton text="Action" type="Transparent" icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

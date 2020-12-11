@@ -1,0 +1,271 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.untitledPrototype.controller.Page2" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
+    <Page showHeader="true" title="Facturas proveedores" showFooter="true" showNavButton="false">
+        <content>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="" iconColor="Default" text="Pagadas" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table width="auto" noDataText="No data" mode="SingleSelect" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin" itemPress="_onTableItemPress" items="{path:'/FactProveSet', templateShareable:true}">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Title text="Items (3)" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                            <ToolbarSpacer width=""/>
+                                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Settings" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="ID Factura" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Estado Factura" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Encargado" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Proveedor" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fecha Ingreso" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fecha vencimiento" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Valor Factura" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Navigation">
+                                        <cells>
+                                            <Link text="{ID}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <Text text="{Estado}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{Encargado}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{Proveedor}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Fecha_ingreso', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Fecha_vencimiento', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="{path: 'Valor_total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="COP" emphasized="true" state="None"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                            <chart:Chart id="sap_Worklist_Page_0-content-sap_m_IconTabBar-1-items-sap_m_IconTabFilter-1-content-sap_chart_LineChart-1607647125093" width="100%" height="450px" visibleDimensions="__metadata/uri" visibleMeasures="Valor_total" vizProperties="{staticDataModel>/sap_Worklist_Page_0-content-sap_m_IconTabBar-1-items-sap_m_IconTabFilter-1-content-sap_chart_LineChart-1607647125093/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                <chart:dimensions>
+                                    <data:Dimension name="__metadata/uri" label="Fecha" role="category" textProperty="Fecha_vencimiento"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="Valor_total" label="Pagadas" role="axis1"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="" iconColor="Default" text="Por pagar" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin" items="{path:'/DetalleFacturaSet', templateShareable:true, parameters:{expand:'RelationName'}}">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Text text="Work Items (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="23" width="17px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text=")" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ToolbarSpacer width=""/>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Settings" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="ID Facura" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Estado Factura" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Encargado" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Proveedor" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fecha de ingreso" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fecha Vencimiento" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Valor Factura" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Navigation">
+                                        <cells>
+                                            <Link text="{ID}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <Text text="{Nombre_Producto}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Fecha_Entrega', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Cantidad', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Link text="{path: 'Valor_Unitario', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <Text text="{path: 'Valor_Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="{RelationName/ID}" unit="{RelationName/Nombre}" emphasized="true" state="None"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="" iconColor="Default" text="Vencidas" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin" items="{path:'/DetalleFacturaSet', templateShareable:true, parameters:{expand:'RelationName'}}">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Text text="Work Items (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="23" width="17px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text=")" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ToolbarSpacer width=""/>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <Title text="Items (3)" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <OverflowToolbarButton text="Settings" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="ID Factura" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Estado Factura" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Encargado" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Proveedor" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fecha de Ingreso" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Fecha Vencimiento" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Valor Factura" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Navigation" press="_onRowPress">
+                                        <cells>
+                                            <Link text="{ID}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <Text text="{Nombre_Producto}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Fecha_Entrega', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Cantidad', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Valor_Unitario', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="{path: 'Valor_Total', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="{RelationName/ID}" unit="{RelationName/Nombre}" emphasized="true" state="None"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+            <Button text="Volver al inicio" type="Default" icon="sap-icon://home" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+            <Button text="Ir detalle Factura" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <OverflowToolbarButton text="Action" type="Transparent" icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
